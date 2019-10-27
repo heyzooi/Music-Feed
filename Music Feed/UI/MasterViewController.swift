@@ -27,7 +27,7 @@ class MasterViewController: UITableViewController {
 
         if let split = splitViewController {
             let controllers = split.viewControllers
-            let navigationController = controllers[controllers.count-1] as? UINavigationController
+            let navigationController = controllers[controllers.count - 1] as? UINavigationController
             detailViewController = navigationController?.topViewController as? DetailViewController
         }
     }
@@ -87,6 +87,19 @@ class MasterViewController: UITableViewController {
         cell.album = albums[indexPath.row]
         cell.reloadCallback = { tableView.reloadRows(at: [indexPath], with: .fade) }
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let split = splitViewController else {
+            return
+        }
+        let detailViewController = self.detailViewController ?? DetailViewController()
+        detailViewController.album = albums[indexPath.row]
+        let controllers = split.viewControllers
+        let navigationController = controllers[controllers.count - 1] as? UINavigationController
+        navigationController?.popToRootViewController(animated: false)
+        navigationController?.pushViewController(detailViewController, animated: true)
+        self.detailViewController = detailViewController
     }
 
 }
