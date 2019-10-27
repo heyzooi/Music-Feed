@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,11 +11,13 @@
 		5775D0532364BD1200C51EF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5775D0522364BD1200C51EF7 /* SceneDelegate.swift */; };
 		5775D0552364BD1200C51EF7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5775D0542364BD1200C51EF7 /* MasterViewController.swift */; };
 		5775D0572364BD1200C51EF7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5775D0562364BD1200C51EF7 /* DetailViewController.swift */; };
-		5775D05A2364BD1200C51EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5775D0582364BD1200C51EF7 /* Main.storyboard */; };
 		5775D05C2364BD1300C51EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5775D05B2364BD1300C51EF7 /* Assets.xcassets */; };
 		5775D05F2364BD1300C51EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5775D05D2364BD1300C51EF7 /* LaunchScreen.storyboard */; };
 		5775D06A2364BD1300C51EF7 /* Music_FeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5775D0692364BD1300C51EF7 /* Music_FeedTests.swift */; };
 		5775D0752364BD1300C51EF7 /* Music_FeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5775D0742364BD1300C51EF7 /* Music_FeedUITests.swift */; };
+		579B7D3C23652427007B0BF9 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579B7D3B23652427007B0BF9 /* AlbumCell.swift */; };
+		579B7D3F23652E71007B0BF9 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579B7D3E23652E71007B0BF9 /* Cache.swift */; };
+		57D1B73E23651F68007358ED /* AppleFeed in Frameworks */ = {isa = PBXBuildFile; productRef = 57D1B73D23651F68007358ED /* AppleFeed */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,6 @@
 		5775D0522364BD1200C51EF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5775D0542364BD1200C51EF7 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		5775D0562364BD1200C51EF7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		5775D0592364BD1200C51EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5775D05B2364BD1300C51EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5775D05E2364BD1300C51EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5775D0602364BD1300C51EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +52,8 @@
 		5775D0702364BD1300C51EF7 /* Music FeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music FeedUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5775D0742364BD1300C51EF7 /* Music_FeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_FeedUITests.swift; sourceTree = "<group>"; };
 		5775D0762364BD1300C51EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		579B7D3B23652427007B0BF9 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		579B7D3E23652E71007B0BF9 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D1B73E23651F68007358ED /* AppleFeed in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +105,10 @@
 		5775D04F2364BD1200C51EF7 /* Music Feed */ = {
 			isa = PBXGroup;
 			children = (
+				579B7D3D23652E60007B0BF9 /* Store */,
+				57D1B73B23651EC2007358ED /* UI */,
 				5775D0502364BD1200C51EF7 /* AppDelegate.swift */,
 				5775D0522364BD1200C51EF7 /* SceneDelegate.swift */,
-				5775D0542364BD1200C51EF7 /* MasterViewController.swift */,
-				5775D0562364BD1200C51EF7 /* DetailViewController.swift */,
-				5775D0582364BD1200C51EF7 /* Main.storyboard */,
 				5775D05B2364BD1300C51EF7 /* Assets.xcassets */,
 				5775D05D2364BD1300C51EF7 /* LaunchScreen.storyboard */,
 				5775D0602364BD1300C51EF7 /* Info.plist */,
@@ -131,6 +134,24 @@
 			path = "Music FeedUITests";
 			sourceTree = "<group>";
 		};
+		579B7D3D23652E60007B0BF9 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				579B7D3E23652E71007B0BF9 /* Cache.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		57D1B73B23651EC2007358ED /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5775D0542364BD1200C51EF7 /* MasterViewController.swift */,
+				5775D0562364BD1200C51EF7 /* DetailViewController.swift */,
+				579B7D3B23652427007B0BF9 /* AlbumCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,12 +162,16 @@
 				5775D0492364BD1200C51EF7 /* Sources */,
 				5775D04A2364BD1200C51EF7 /* Frameworks */,
 				5775D04B2364BD1200C51EF7 /* Resources */,
+				5775D0862364BDDC00C51EF7 /* SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Music Feed";
+			packageProductDependencies = (
+				57D1B73D23651F68007358ED /* AppleFeed */,
+			);
 			productName = "Music Feed";
 			productReference = 5775D04D2364BD1200C51EF7 /* Music Feed.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +244,9 @@
 				Base,
 			);
 			mainGroup = 5775D0442364BD1200C51EF7;
+			packageReferences = (
+				57D1B73C23651F68007358ED /* XCRemoteSwiftPackageReference "AppleFeed" */,
+			);
 			productRefGroup = 5775D04E2364BD1200C51EF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,7 +265,6 @@
 			files = (
 				5775D05F2364BD1300C51EF7 /* LaunchScreen.storyboard in Resources */,
 				5775D05C2364BD1300C51EF7 /* Assets.xcassets in Resources */,
-				5775D05A2364BD1200C51EF7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,13 +284,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5775D0862364BDDC00C51EF7 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5775D0492364BD1200C51EF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				579B7D3F23652E71007B0BF9 /* Cache.swift in Sources */,
 				5775D0512364BD1200C51EF7 /* AppDelegate.swift in Sources */,
 				5775D0532364BD1200C51EF7 /* SceneDelegate.swift in Sources */,
+				579B7D3C23652427007B0BF9 /* AlbumCell.swift in Sources */,
 				5775D0552364BD1200C51EF7 /* MasterViewController.swift in Sources */,
 				5775D0572364BD1200C51EF7 /* DetailViewController.swift in Sources */,
 			);
@@ -301,14 +351,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5775D0582364BD1200C51EF7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5775D0592364BD1200C51EF7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5775D05D2364BD1300C51EF7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -594,6 +636,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		57D1B73C23651F68007358ED /* XCRemoteSwiftPackageReference "AppleFeed" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/heyzooi/AppleFeed.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		57D1B73D23651F68007358ED /* AppleFeed */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57D1B73C23651F68007358ED /* XCRemoteSwiftPackageReference "AppleFeed" */;
+			productName = AppleFeed;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5775D0452364BD1200C51EF7 /* Project object */;
 }

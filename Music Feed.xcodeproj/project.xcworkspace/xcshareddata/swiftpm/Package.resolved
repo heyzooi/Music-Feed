@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AppleFeed",
+        "repositoryURL": "https://github.com/heyzooi/AppleFeed.git",
+        "state": {
+          "branch": "master",
+          "revision": "ed9d5b0c15f05afdcf2344c13a39064c0bc6f1bd",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -9,7 +9,7 @@
 import XCTest
 @testable import Music_Feed
 
-class Music_FeedTests: XCTestCase {
+class MusicFeedTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
