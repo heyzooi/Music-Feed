@@ -53,24 +53,6 @@ class MasterViewController: UITableViewController {
         )
     }
 
-    // MARK: - Segues
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showDetail" {
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//                let object = objects[indexPath.row] as? NSDate
-//                let navigationController = segue.destination as? UINavigationController
-//                guard let controller = navigationController?.topViewController as? DetailViewController else {
-//                    return
-//                }
-//                controller.detailItem = object
-//                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-//                controller.navigationItem.leftItemsSupplementBackButton = true
-//                detailViewController = controller
-//            }
-//        }
-//    }
-
     // MARK: - Table View
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -90,16 +72,22 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let split = splitViewController else {
-            return
+        switch UIDevice.current.userInterfaceIdiom {
+        case .pad:
+            let detailViewController = self.detailViewController ?? DetailViewController()
+            detailViewController.album = albums[indexPath.row]
+        default:
+            guard let split = splitViewController else {
+                return
+            }
+            let detailViewController = self.detailViewController ?? DetailViewController()
+            detailViewController.album = albums[indexPath.row]
+            let controllers = split.viewControllers
+            let navigationController = controllers[controllers.count - 1] as? UINavigationController
+            navigationController?.popToRootViewController(animated: false)
+            navigationController?.pushViewController(detailViewController, animated: true)
+            self.detailViewController = detailViewController
         }
-        let detailViewController = self.detailViewController ?? DetailViewController()
-        detailViewController.album = albums[indexPath.row]
-        let controllers = split.viewControllers
-        let navigationController = controllers[controllers.count - 1] as? UINavigationController
-        navigationController?.popToRootViewController(animated: false)
-        navigationController?.pushViewController(detailViewController, animated: true)
-        self.detailViewController = detailViewController
     }
 
 }

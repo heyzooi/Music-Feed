@@ -52,7 +52,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
 
         let views = [
             "albumCell": albumCell,
@@ -184,8 +184,10 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         guard let album = album else {
+            openItunesButton.isHidden = true
             return
         }
+        openItunesButton.isHidden = false
         albumCell.album = album
         genreLabel.text = "Genres\n\(album.genres.map { $0.name }.joined(separator: "\n"))"
 

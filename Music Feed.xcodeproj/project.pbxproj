@@ -54,6 +54,7 @@
 		5775D0762364BD1300C51EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		579B7D3B23652427007B0BF9 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		579B7D3E23652E71007B0BF9 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		57A683E42366505100245985 /* Music Feed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Music Feed.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +106,7 @@
 		5775D04F2364BD1200C51EF7 /* Music Feed */ = {
 			isa = PBXGroup;
 			children = (
+				57A683E42366505100245985 /* Music Feed.entitlements */,
 				579B7D3D23652E60007B0BF9 /* Store */,
 				57D1B73B23651EC2007358ED /* UI */,
 				5775D0502364BD1200C51EF7 /* AppDelegate.swift */,
@@ -480,7 +482,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Music Feed/Music Feed.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = C2YG2SW4ED;
 				INFOPLIST_FILE = "Music Feed/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -489,6 +493,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hzapps.Music-Feed";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,7 +503,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Music Feed/Music Feed.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = C2YG2SW4ED;
 				INFOPLIST_FILE = "Music Feed/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -507,6 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hzapps.Music-Feed";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
